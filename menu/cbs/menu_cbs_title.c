@@ -771,6 +771,7 @@ DEFAULT_FILL_TITLE_MACRO(action_get_title_extraction_directory,   MENU_ENUM_LABE
 DEFAULT_FILL_TITLE_MACRO(action_get_title_menu,                   MENU_ENUM_LABEL_VALUE_MENU_SETTINGS)
 DEFAULT_FILL_TITLE_MACRO(action_get_title_video_font_path,        MENU_ENUM_LABEL_VALUE_VIDEO_FONT_PATH)
 DEFAULT_FILL_TITLE_MACRO(action_get_title_xmb_font,               MENU_ENUM_LABEL_VALUE_XMB_FONT)
+DEFAULT_FILL_TITLE_MACRO(action_get_title_ozone_font,             MENU_ENUM_LABEL_VALUE_OZONE_FONT)
 DEFAULT_FILL_TITLE_MACRO(action_get_title_log_dir,                MENU_ENUM_LABEL_VALUE_LOG_DIR)
 DEFAULT_FILL_TITLE_MACRO(action_get_title_manual_content_scan_dir, MENU_ENUM_LABEL_VALUE_MANUAL_CONTENT_SCAN_DIR)
 
@@ -907,7 +908,7 @@ static int action_get_title_group_settings(const char *path, const char *label,
    /* Note: MENU_ENUM_LABEL_HORIZONTAL_MENU *is* a playlist
     * tab, but its actual title is set elsewhere - so treat
     * it as a generic top-level item */
-   title_info_list_t info_list[] = {
+   static const title_info_list_t info_list[] = {
       {MENU_ENUM_LABEL_MAIN_MENU,             MENU_ENUM_LABEL_VALUE_MAIN_MENU,             false },
       {MENU_ENUM_LABEL_HISTORY_TAB,           MENU_ENUM_LABEL_VALUE_HISTORY_TAB,           true  },
       {MENU_ENUM_LABEL_FAVORITES_TAB,         MENU_ENUM_LABEL_VALUE_FAVORITES_TAB,         true  },
@@ -978,7 +979,7 @@ static int menu_cbs_init_bind_title_compare_label(menu_file_list_cbs_t *cbs,
             unsigned type, char *s, size_t len);
    } title_info_list_t;
 
-   title_info_list_t info_list[] = {
+   static const title_info_list_t info_list[] = {
       {MENU_ENUM_LABEL_DEFERRED_REMAPPINGS_PORT_LIST,                 action_get_title_remap_port},
       {MENU_ENUM_LABEL_DEFERRED_CORE_SETTINGS_LIST,                   action_get_core_settings_list},
       {MENU_ENUM_LABEL_DEFERRED_CORE_INFORMATION_LIST,                action_get_core_information_list},
@@ -1296,6 +1297,8 @@ static int menu_cbs_init_bind_title_compare_label(menu_file_list_cbs_t *cbs,
          action_get_title_video_font_path},
       {MENU_ENUM_LABEL_XMB_FONT,
          action_get_title_xmb_font},
+      {MENU_ENUM_LABEL_OZONE_FONT,
+         action_get_title_ozone_font},
       {MENU_ENUM_LABEL_VIDEO_FILTER,
          action_get_title_video_filter},
       {MENU_ENUM_LABEL_AUDIO_DSP_PLUGIN,
@@ -1737,6 +1740,9 @@ static int menu_cbs_init_bind_title_compare_label(menu_file_list_cbs_t *cbs,
          case MENU_ENUM_LABEL_XMB_FONT:
             BIND_ACTION_GET_TITLE(cbs, action_get_title_xmb_font);
             break;
+         case MENU_ENUM_LABEL_OZONE_FONT:
+            BIND_ACTION_GET_TITLE(cbs, action_get_title_ozone_font);
+            break;
          case MENU_ENUM_LABEL_VIDEO_FILTER:
             BIND_ACTION_GET_TITLE(cbs, action_get_title_video_filter);
             break;
@@ -1812,7 +1818,7 @@ int menu_cbs_init_bind_title(menu_file_list_cbs_t *cbs,
             unsigned type, char *s, size_t len);
    } title_info_list_t;
 
-   title_info_list_t info_list[] = {
+   static const title_info_list_t info_list[] = {
 #ifdef HAVE_AUDIOMIXER
       {MENU_ENUM_LABEL_DEFERRED_MIXER_STREAM_SETTINGS_LIST,                                 action_get_title_mixer_stream_actions},
 #endif

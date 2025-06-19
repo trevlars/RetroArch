@@ -2568,6 +2568,10 @@ MSG_HASH(
    "Adaptiv VSynk"
    )
 MSG_HASH(
+   MENU_ENUM_SUBLABEL_VIDEO_ADAPTIVE_VSYNC,
+   "VSync är aktiverat tills prestandan sjunker under den önskade uppdateringsfrekvensen. Kan minimera hackighet när prestandan sjunker under realtid och vara mer energieffektivt. Inte kompatibelt med ”Bildrutefördröjning”."
+   )
+MSG_HASH(
    MENU_ENUM_LABEL_VALUE_VIDEO_FRAME_DELAY,
    "Bildrutefördröjning"
    )
@@ -2582,6 +2586,14 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_VIDEO_FRAME_DELAY_AUTO,
    "Automatisk bildfördröjning"
+   )
+MSG_HASH(
+   MENU_ENUM_SUBLABEL_VIDEO_FRAME_DELAY_AUTO,
+   "Justera effektiv 'Bildrutefördröjning' dynamiskt."
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_HELP_VIDEO_FRAME_DELAY_AUTO,
+   "Försök att hålla önskat mål för 'Bildrutefördröjning' och minimera bildförluster. Utgångspunkten är 3/4 av bildrutans tid när bildfördröjningen är 0 (Auto)."
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_VIDEO_FRAME_DELAY_EFFECTIVE,
@@ -3586,6 +3598,14 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_SUBLABEL_INPUT_META_PAUSE_TOGGLE,
    "Växlar innehåll mellan pausade och icke-pausade tillstånd."
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_INPUT_META_FRAMEADVANCE,
+   "Avancera bildruta"
+   )
+MSG_HASH(
+   MENU_ENUM_SUBLABEL_INPUT_META_FRAMEADVANCE,
+   "Avancerar innehållet med en bildruta när pausad."
    )
 
 MSG_HASH(
@@ -5310,6 +5330,10 @@ MSG_HASH(
    "Visa aktuella bilder per sekund på skärmen."
    )
 MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_FPS_UPDATE_INTERVAL,
+   "Bildfrekvensens uppdateringsintervall (i bildrutor)"
+   )
+MSG_HASH(
    MENU_ENUM_LABEL_VALUE_FRAMECOUNT_SHOW,
    "Visa bildruteräknare"
    )
@@ -5352,6 +5376,14 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_MENU_SHOW_LOAD_CONTENT_ANIMATION,
    "\"Läs in innehåll\"-notifiering vid uppstart"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_NOTIFICATION_SHOW_AUTOCONFIG,
+   "Meddelanden om inmatningsanslutning (Autoconfig)"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_NOTIFICATION_SHOW_AUTOCONFIG_FAILS,
+   "Meddelanden om inmatningsfel (Autoconfig)"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_NOTIFICATION_SHOW_CHEATS_APPLIED,
@@ -5645,6 +5677,14 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_SUBLABEL_MENU_KIOSK_MODE_PASSWORD,
    "Att ange ett lösenord när kioskläget aktiveras gör det möjligt att senare inaktivera kioskläget från menyn, genom att gå till huvudmenyn, välja Inaktivera Kioskläge och ange lösenordet."
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_NAVIGATION_WRAPAROUND,
+   "Navigering börjar om från början"
+   )
+MSG_HASH(
+   MENU_ENUM_SUBLABEL_NAVIGATION_WRAPAROUND,
+   "Börja om från början och/eller slutet när listans slut har nåtts horisontellt eller vertikalt."
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_PAUSE_LIBRETRO,
@@ -6237,6 +6277,14 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_SUBLABEL_QUICK_MENU_SHOW_SAVE_CORE_OVERRIDES,
    "Visa alternativet 'Spara kärnåsidosättningar' i menyn 'Åsidosättningar'."
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_QUICK_MENU_SHOW_SAVE_GAME_OVERRIDES,
+   "Visa 'Åsidosättningar för sparat spel'"
+   )
+MSG_HASH(
+   MENU_ENUM_SUBLABEL_QUICK_MENU_SHOW_SAVE_GAME_OVERRIDES,
+   "Visa alternativet 'Åsidosättningar för sparat spel' i menyn 'Åsidosättningar'."
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_QUICK_MENU_SHOW_CHEATS,
@@ -6901,6 +6949,10 @@ MSG_HASH(
 
 /* Settings > Network */
 
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_NETPLAY_PUBLIC_ANNOUNCE,
+   "Annonsera Netplay publikt"
+   )
 MSG_HASH(
    MENU_ENUM_SUBLABEL_NETPLAY_PUBLIC_ANNOUNCE,
    "Om netplay-spel ska annonseras offentligt. Om inställningen är avaktiverad måste klienter ansluta manuellt i stället för att använda den publika lobbyn."
@@ -10655,6 +10707,14 @@ MSG_HASH(
 /* Ozone: Settings > User Interface > Appearance */
 
 MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_OZONE_FONT,
+   "Typsnitt"
+   )
+MSG_HASH(
+   MENU_ENUM_SUBLABEL_OZONE_FONT,
+   "Välj ett annat huvudsakligt teckensnitt som ska användas av menyn."
+   )
+MSG_HASH(
    MENU_ENUM_LABEL_VALUE_OZONE_COLLAPSE_SIDEBAR,
    "Dölj sidofältet"
    )
@@ -10697,6 +10757,22 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_SUBLABEL_OZONE_THUMBNAIL_SCALE_FACTOR,
    "Skala storleken på miniatyrfältet."
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_OZONE_HEADER_SEPARATOR,
+   "Rubrikavgränsare"
+   )
+MSG_HASH(
+   MENU_ENUM_SUBLABEL_OZONE_HEADER_SEPARATOR,
+   "Alternativ bredd för avgränsare för rubrik och sidfot."
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_OZONE_HEADER_SEPARATOR_NONE,
+   "Ingen"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_OZONE_HEADER_SEPARATOR_MAXIMUM,
+   "Maximalt"
    )
 
 MSG_HASH(
@@ -11476,6 +11552,10 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_QT_DOWNLOAD_ALL_THUMBNAILS_THIS_PLAYLIST,
    "Denna spellista"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_QT_THUMBNAIL_PACK_DOWNLOADED_SUCCESSFULLY,
+   "Miniatyrbilder hämtades ner."
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_QT_DOWNLOAD_PLAYLIST_THUMBNAIL_PROGRESS,
@@ -12970,6 +13050,10 @@ MSG_HASH(
    "Läser första dataspåret..."
    )
 MSG_HASH(
+   MSG_RECORDING_TERMINATED_DUE_TO_RESIZE,
+   "Inspelning avslutad på grund av storleksändring."
+   )
+MSG_HASH(
    MSG_RECORDING_TO,
    "Spelar in till"
    )
@@ -13026,6 +13110,18 @@ MSG_HASH(
    "Buffertkapaciteten räcker inte till."
    )
 MSG_HASH(
+   MSG_REWIND_INIT_FAILED_THREADED_AUDIO,
+   "Implementation använder trådat ljud. Kan inte använda tillbakaspolning."
+   )
+MSG_HASH(
+   MSG_REWIND_REACHED_END,
+   "Nådde slutet på tillbakaspolningsbufferten."
+   )
+MSG_HASH(
+   MSG_SAVED_NEW_CONFIG_TO,
+   "Sparade konfiguration till"
+   )
+MSG_HASH(
    MSG_SAVED_STATE_TO_SLOT,
    "Sparade status till plats #%d."
    )
@@ -13058,8 +13154,16 @@ MSG_HASH(
    "Skickar kommando"
    )
 MSG_HASH(
+   MSG_SEVERAL_PATCHES_ARE_EXPLICITLY_DEFINED,
+   "Flera patchar är explicit definierade, ignorerar alla..."
+   )
+MSG_HASH(
    MSG_FAST_FORWARD,
    "Snabbspolning."
+   )
+MSG_HASH(
+   MSG_SLOW_MOTION_REWIND,
+   "Tillbakaspolning i slow-motion."
    )
 MSG_HASH(
    MSG_SKIPPING_SRAM_LOAD,
@@ -13510,6 +13614,14 @@ MSG_HASH(
    "RetroAchievements: Spelet kunde inte identifieras."
    )
 MSG_HASH(
+   MSG_CHEEVOS_GAME_LOAD_FAILED,
+   "Spelinläsning för RetroAchievements misslyckades: %s"
+   )
+MSG_HASH(
+   MSG_CHEEVOS_CHANGE_MEDIA_FAILED,
+   "Mediabyte för RetroAchievements misslyckades: %s"
+   )
+MSG_HASH(
    MSG_RESAMPLER_QUALITY_LOWEST,
    "Lägsta"
    )
@@ -13856,8 +13968,16 @@ MSG_HASH(
    "Koppla från"
    )
 MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_VIDEO_OVERSCAN_CORRECTION_TOP,
+   "Överskanningskorrigering (Topp)"
+   )
+MSG_HASH(
    MENU_ENUM_SUBLABEL_VIDEO_OVERSCAN_CORRECTION_TOP,
    "Justera beskärning av överskanning av skärmen genom att minska bildstorleken med ett angivet antal skanningslinjer (tagen från skärmens övre del). Kan orsaka skalningsartefakter."
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_VIDEO_OVERSCAN_CORRECTION_BOTTOM,
+   "Överskanningskorrigering (Botten)"
    )
 MSG_HASH(
    MENU_ENUM_SUBLABEL_VIDEO_OVERSCAN_CORRECTION_BOTTOM,

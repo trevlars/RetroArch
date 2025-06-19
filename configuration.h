@@ -24,6 +24,7 @@
 #include <boolean.h>
 #include <retro_common_api.h>
 #include <retro_miscellaneous.h>
+#include <file/config_file.h>
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"
@@ -578,6 +579,7 @@ typedef struct settings
       char bundle_assets_src[PATH_MAX_LENGTH];
       char bundle_assets_dst[PATH_MAX_LENGTH];
       char path_menu_xmb_font[PATH_MAX_LENGTH];
+      char path_menu_ozone_font[PATH_MAX_LENGTH];
       char path_cheat_database[PATH_MAX_LENGTH];
       char path_content_database[PATH_MAX_LENGTH];
       char path_overlay[PATH_MAX_LENGTH];
@@ -1315,6 +1317,8 @@ int8_t config_save_overrides(enum override_type type,
  * another one. Will load a dummy core to flush state
  * properly. */
 bool config_replace(bool config_save_on_exit, char *path);
+
+config_file_t *open_default_config_file(void);
 #endif
 
 bool config_overlay_enable_default(void);
